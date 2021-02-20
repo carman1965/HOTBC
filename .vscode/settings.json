@@ -6,7 +6,15 @@
         "**/CVS": true,
         "**/.DS_Store": true
     },
+    "editor.formatOnSave": true,
     "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "prettier.bracketSpacing": true,
+    "prettier.endOfLine": "crlf",
+    "prettier.arrowParens": "always",
+    "prettier.quoteProps": "as-needed",
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "es5",
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.formats": [
         {

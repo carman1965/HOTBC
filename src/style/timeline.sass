@@ -9,7 +9,6 @@ body
 	display: flexbox
 	background-color: #031625
 
-
 	&:hover .t1-item
 		width: 100%
 		align-items: center
@@ -24,7 +23,6 @@ body
 	overflow: hidden
 	transition: width 0.5s ease
 
-
 	&:before,
 
 	&::after
@@ -36,12 +34,10 @@ body
 		width: 100%
 		height: 100%
 
-
 	&::after
 		background: rgba(3, 22, 37, 0.85)
 		opacity: 1
 		transition: opacity 0.5s ease
-
 
 	&:before
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%)
@@ -50,26 +46,21 @@ body
 		transform: translate3d(0, 0, 0) translateY(50%)
 		transition: opacity 0.5s ease, transform 0.5s ease
 
-
 	&:hover
 		width: 25%
 
-
 	&:hover:after
 		opacity: 0
-
 
 	&:hover::before
 		opacity: 1
 		transform: translate3d(0, 0, 0) translateY(0)
 		transition: opacity 1s ease, transform 1s ease 0.25s
 
-
 	&:hover .t1-content
 		opacity: 1
 		transform: translateY(0)
 		transition: all 0.75s ease 0.5s
-
 
 	&:hover .t1-bg
 		filter: grayscale(0)
@@ -82,7 +73,6 @@ body
 	margin: 0.1618em
 	top: 55%
 	opacity: 0
-
 
 	& h1
 		font-family: tahoma
@@ -99,7 +89,6 @@ body
 	z-index: 1
 	border-top: 1px solid white
 	border-bottom: 1px solid white
-
 
 	& p
 		font-family: tahoma

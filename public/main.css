@@ -1,78 +1,78 @@
 /* Header Styles */
 .header-img {
-	height: 150px;
-	width: 100%;
+    height: 150px;
+    width: 100%;
 }
 .header-logo {
-	position: relative;
-	left: 0;
-	top: 0;
-	height: 100px;
-	width: auto;
-	padding: 20px;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: auto;
+    padding: 20px;
 }
 /* Navigation Styles */
 .nav-wrapper {
-	display: flex;
-	justify-content: space-between;
-	padding: 38px;
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
 }
 .nav-left-side {
-	display: flex;
+    display: flex;
 }
 .nav-wrapper > .nav-left-side > div {
-	margin-right: 20px;
-	font-size: 0.9em;
-	text-transform: uppercase;
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 .nav-link-wrapper {
-	height: 22px;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.5s;
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
 }
 .nav-link-wrapper a {
-	color: #b44200;
-	text-decoration: none;
-	transition: color 0.75s;
+    color: #b44200;
+    text-decoration: none;
+    transition: color 0.75s;
 }
 .nav-link-wrapper:hover {
-	border-bottom: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 .nav-link-wrapper:hover a {
-	color: black;
+    color: black;
 }
 
 /* Body Styles */
 .items-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .item-wrapper {
-	position: relative;
+    position: relative;
 }
 .img-background {
-	height: 350px;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .img-text-wrapper {
-	position: absolute;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /*center Left to Right */
-	align-items: center; /*Center Top to Bottom */
-	height: 100%;
-	text-align: center;
-	padding-left: 100px;
-	padding-right: 100px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*center Left to Right */
+    align-items: center; /*Center Top to Bottom */
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .iframe-youtube {
-	height: 350px;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

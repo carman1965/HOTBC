@@ -1,0 +1,23 @@
+{
+  "name": "hotbc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carman1965/HOTBC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carman1965/HOTBC/issues"
+  },
+  "homepage": "https://github.com/carman1965/HOTBC#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

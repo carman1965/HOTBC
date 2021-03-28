@@ -1,1 +1,0 @@
-document.getElementsByClassName('t1-content').innerHTML='My First JS';

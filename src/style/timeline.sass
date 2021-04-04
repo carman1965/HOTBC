@@ -73,38 +73,39 @@
 	z-index: 1
 	text-align: center
 	margin: 0.1618em
-	top: 55%
+	top: 60%
 	opacity: 0
+	background-color: #83838342
 	background-image: linear-gradient(to bottom, transparent, black)
 
 	& h1
 		font-family: tahoma
 		text-transform: uppercase
 		color: #ffffff
-		background-size:
-		background-color: #00000046
+		// background-size:
+		// background-color: #00000046
 		font-size: .8rem
 		font-weight: normal
 
 	& p
 		color: #ffffff
-		background-color: #00000046
+		// background-color: #00000046
 		font-size: 0.7rem
 
 .t1-year
 	position: absolute
 	top: 50%
 	left: 50%
-	transform: translateX(-50%) translateY(-50%)
 	z-index: 1
 
 	& p
 		font-family: tahoma
 		text-shadow: 2px 2px #000000
+		transform: translateX(-50%) translateY(-50%)
 		font-size: 1.628rem
 		line-height: 0
-		border-top: 1px solid white
-		border-bottom: 1px solid white
+		// border-top: 1px solid white
+		// border-bottom: 1px solid white
 
 .t1-bg
 	transform: translate3d(0, 0, 0)
@@ -118,6 +119,12 @@
 	background-position: center center
 	transition: filter 0.5se ease
 	filter: grayscale(100%)
+
+.myGalleryBtn
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2
 
 @media only screen and (min-width: 575.98px)
 	#timelineHtml

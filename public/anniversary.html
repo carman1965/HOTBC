@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>75 Years - Heart of Texas Baptist Camp and Conference Center</title>
+    <link rel="stylesheet" href="./build/style/global.css" />
+</head>
+<body>
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="https://heartoftexascamp.com/timeline202175">Timeline</a>
+        <a href="#photogallery">Photo Gallery</a>
+    </div>
+    <section id="75anniversary">
+        <div class="t0-item">
+            <div>
+            <!-- <div class="t0-bg" style="background-image: url(https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/b3724d82b4eb44be819208440bc78b74/1/4SoifmQpAbHrGFzRuwTbr?nocache);"> -->
+                <!-- The video -->
+                <video autoplay muted loop id="myVideo">
+                    <source src="https://youtu.be/JXE_j9PjHm8" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="t0-content">
+                <img class="t0-img1" src="https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/cb76a6a8e38d452fa7b92daa26633c09/1/4SoifmQpAbHrGFzRuwTbr?nocache" alt="">
+            </div>
+        </div>
+</section>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+            } else {
+            document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+      
+</body>
+</html>

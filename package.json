@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:css": "sass --watch src/style/timeline.sass public/build/style/global.css"
+    "dev:css": "sass --watch src/style/anniversary.sass public/build/style/global.css"
   },
   "repository": {
     "type": "git",

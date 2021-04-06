@@ -1,12 +1,14 @@
-//Navigation bar styles
+//***** Navigation bar styles *****
 #navbar 
-	background-color: #333
+	background-color: #333333
 	position: fixed	
 	top: 0
 	width: 100%
 	display: block
 	transition: top 0.3s
 	overflow: hidden
+	z-index: 9999999999999
+	float: right
 
 #navbar a 
 	float: left
@@ -21,25 +23,26 @@
 	background-color: #ddd
 	color: black
 
-//75th Anniversary Homepage
+//***** 75th Anniversary Homepage *****
 .t0-img1
 	display: block
 	position: absolute
 	top: 50%
 	left: 50%
-	margin-left: auto
-	margin-right: auto
-	transform: translate(-50%, -50%)
+	// margin-left: auto
+	// margin-right: auto
+	transform: translate(50%, 50%)
 	width: 250px
 	height: auto
+	z-index: 2
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo 
-	position: fixed
-	right: 0
-	bottom: 0
-	min-width: 100%
-	min-height: 100%
+// /* Style the video: 100% width and height to cover the entire window */
+// #myVideo 
+// 	position: fixed
+// 	right: 0
+// 	bottom: 0
+// 	min-width: 100%
+// 	min-height: 100%
 
 /* Add some content at the bottom of the video/page */
 .t0-content 
@@ -50,21 +53,24 @@
 	width: 100%
 	padding: 20px
 
-/* Style the button used to pause/play the video */
-#myBtn 
-	width: 200px
-	font-size: 18px
-	padding: 10px
-	border: none
-	background: #000
-	color: #fff
-	cursor: pointer
+.t0-bg
+	// transform: translate3d(0, 0, 0)
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	// transition: filter 0.5se ease
+	// filter: grayscale(100%)
 
 #myBtn:hover
 	background: #ddd
 	color: black
 
-//Timeline CSS
+//***** Timeline CSS *****
 #timelineHtml
 	font-family: tahome
 	font-size: 30px

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html id="timelineHtml" lang="en">
+<html id="AnniversaryHtml" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<title>75th Anniversary Timeline - Heart of Texas Baptist Camp and Conference Center</title>
 		<link rel="stylesheet" href="./build/style/global.css" />
 	</head>
 	<body>
-		<div id="navbar">
-			<a href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
-			<a href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
-			<a href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
-			<a href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+		<nav>
+			<div id="navbar">
+				<a class="navbar-logo" href="https://heartoftexascamp.com/75th-anniversary/">
+					<div class="logo-image">
+						<img src="
+							https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/ddf3f59bf1ec4416b0d26b6ebda5f438/1/4SoifmQpAbHrGFzRuwTbr?nocache
+						" class="img-fluid">
+					</div>
+				</a>
+				<div class="nav-right">
+					<a href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
+					<a href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
+					<a href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
+					<a href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+				</div>
 			</div>
-		<section id="timeline">
+		</nav>
+			<section id="timeline">
 <!--1940's info-->
 			<div class="t1-item">
 				<div
@@ -316,7 +327,7 @@
 				if (prevScrollpos > currentScrollPos) {
 				document.getElementById("navbar").style.top = "0";
 				} else {
-				document.getElementById("navbar").style.top = "-50px";
+				document.getElementById("navbar").style.top = "-130px";
 				}
 				prevScrollpos = currentScrollPos;
 			}

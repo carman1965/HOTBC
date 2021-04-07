@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="AnniversaryHtml" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +8,37 @@
     <link rel="stylesheet" href="./build/style/global.css" />
 </head>
 <body>
-    <div id="navbar">
-        <a href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
-        <a href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
-        <a href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
-        <a href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
-    </div>
+    <nav>
+        <div id="navbar">
+            <a class="navbar-logo" href="https://heartoftexascamp.com/75th-anniversary/">
+                <div class="logo-image">
+                    <img src="
+                        https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/ddf3f59bf1ec4416b0d26b6ebda5f438/1/4SoifmQpAbHrGFzRuwTbr?nocache
+                    " class="img-fluid">
+                </div>
+            </a>
+            <div class="nav-right">
+                <a href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
+                <a href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
+                <a href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
+                <a href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+            </div>
+        </div>
+    </nav>
     <section id="75anniversary">
         <div class="t0-item">
             <!-- <div> -->
             <!-- <div class="t0-bg" style="background-image: url(https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/b3724d82b4eb44be819208440bc78b74/1/4SoifmQpAbHrGFzRuwTbr?nocache);"> -->
                 <!-- The video -->
                 <video autoplay muted loop id="myVideo">
-                    <source src="<iframe width="560" height="315" src="https://www.youtube.com/embed/B2ND34Vc-aM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" type="video/mp4">
+                    <source src="" type="video/mp4">
                 </video>
-            <!-- <div
+            <div
                 class="t0-bg"
                 style="
                     background-image: url(https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/bee161dbdbc745a79281a58295a9b5fe/1/4SoifmQpAbHrGFzRuwTbr?nocache);
                 "
-            ></div> -->
+            ></div>
             <!-- </div> -->
 
             <div class="t0-content">
@@ -48,18 +59,18 @@
             </div>
         </div>
 </section>
-    <!-- <script>
+    <script>
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
             document.getElementById("navbar").style.top = "0";
             } else {
-            document.getElementById("navbar").style.top = "-50px";
+				document.getElementById("navbar").style.top = "-130px";
             }
             prevScrollpos = currentScrollPos;
         }
-    </script> -->
+    </script>
       
 </body>
 </html>

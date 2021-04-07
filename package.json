@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:css": "sass --watch src/style/anniversary.sass public/build/style/global.css"
+    "dev:css": "sass --watch src/style/global.sass public/build/style/global.css"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/carman1965/HOTBC/issues"
   },
+  "liveSassCompile.settings.generateMap": false,
   "homepage": "https://github.com/carman1965/HOTBC#readme",
   "devDependencies": {
     "sass": "^1.32.8"

@@ -1,22 +1,40 @@
 /* ***** 75th Anniversary Homepage ***** */
 
 /* Style the video: 100% width and height to cover the entire window */
+
 .t0-video 
 	display: block
 	position: relative
-	pointer-events: none
 	top: 0
 	left: 0
-	width: 100%
-	height: 100%
+	width: 100vw
+	height: auto
+	pointer-events: none
 	
 /* Add some content at the bottom of the video/page */
 .t0-content 
 	left: 0
 	bottom: 0
 	background: rgb(0, 0, 0)
+	background: rgba(0,0,0,.5)
 	color: #f1f1f1
 	width: 92vw
 	height: auto
-	margin-left: auto
-	margin-right: auto
+
+	h1
+		font-family: broadway
+		font-size: 50px
+		text-align: center
+		padding: 1px
+		
+	p
+		font-family: Arial, Helvetica, sans-serif
+		font-size: 25px
+		text-align: center
+		padding: 1px
+		
+.scrollTo
+	left: 0
+	top: 0
+	z-index: 99
+	// transform: translate(50%, 50%)

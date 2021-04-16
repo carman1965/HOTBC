@@ -1,9 +1,18 @@
-.hot2-body
-    display: block
-    position: relative 
-    background-color: rgb(0, 0, 0)
-    background-image: linear-gradient(to bottom, gray, black)
-   
+#hot2-photoGallery
+    display: flex
+    position: absolute 
+    background-size: 100% 100%
+    background: rgb(2,0,36)
+    background-image: linear-gradient(0deg, #000000 0%, rgba(122,122,122,1) 100%)
+    background-attachment: fixed
+    background-repeat: no-repeat
+    
+.hot2-app
+    top: 0
+    left: 0 
+    max-width: 100%
+    height: 100%
+    
 .hot2-item
     position: relative
     margin: auto
@@ -12,26 +21,31 @@
     justify-content: center
 
 .hot2-h1
-    font-family: broadway
+    font-family: monotype corsiva, bodoni MT, benard
+    font-weight: bold
     font-size: 50px
     text-align: center
     color: rgb(255, 255, 255)
 
 .hot2-gallery
+    display: inline-block
+    width: 320px
+    height: 240px
     margin: auto
     border: 3px solid #fffefe
-    float: left
 
     &:hover
         border: 3px solid #070670
         pointer-events: finger
 
+    .hot2-desc
+        color: white
+        font-size: 18px
+        text-align: center
+        text-transform: capitalize
+
 .hot2-gallery img
-    width: 300px
+    width: 320px
     height: 200px
 
-.hot2-desc
-    color: white
-    text-align: center
-    text-transform: capitalize
 

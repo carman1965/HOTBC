@@ -75,6 +75,10 @@
 		opacity: 1
 		transition: all 0.75s ease 0.5s
 
+	&:hover .hot-img
+		opacity: 1
+		transition: all 0.75s ease 0.5s
+
 .t1-content
 	transform: translate(-50%, -50%)
 	max-height: 30%
@@ -165,7 +169,15 @@
 		transform: translateX(-50%) translateY(-50%)
 		opacity: 0
 
-
+/* Thumbnail loacation and settings */
+.hot-img
+	position: absolute
+	top: 95%
+	left: 75%
+	z-index: 1
+	transform: translateX(-50%) translateY(-50%)
+	opacity: 0
+	
 // Cell phone setup
 	@media only screen and (max-width: 575.98px)
 	#timelineHtml

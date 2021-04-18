@@ -135,17 +135,24 @@
 				<div class="t1-btn1">
 					<button type="button" onclick="document.location='https://www.heartoftexascamp.com/75th-Anniversary/1960-photo-gallery'">View more pictures from 1960's</button>
 				</div>
-				<div class="t1-btn2">
+				<!-- <div class="t1-btn2">
 					<button type="button" onclick="document.location='https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/ffb93b31c9f04f1da660bd011aa77f12/1/4SoifmQpAbHrGFzRuwTbr?nocache'
 					">See Lives Changed from 1960's</button>
-				</div>
-				<!-- <div class="t1-img">
-					<a href="https://www.heartoftexascamp.com/75th-Anniversary/1960-Charts">
-						<img src="
-						https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/bfac8e8129ed4bd6a6a4481d178bec8e/1/4SoifmQpAbHrGFzRuwTbr?nocache	
-						" class="img-fluid">
-					</a>
 				</div> -->
+				<!-- The setup for the modal and thumbnail img-->
+					<img id="hot-modal-img" 
+					class="hot-img"
+					src="https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/cf72e34929ee4b1db7240ea9a52afe37/1/4SoifmQpAbHrGFzRuwTbr?nocache" 
+					alt="Lives Impacted for Christ" style="width:70%;max-width:80px">
+
+				<!-- The Modal -->
+				<div id="hotModal" class="hot-modal">
+					<span class="hotClose">&times;</span>
+					<img class="hot-modal-content" id="hot-img01">
+					<div id="hot-caption"></div>
+				</div>
+
+
 			</div>
 			<!--1970's info-->
 			<div class="t1-item">
@@ -174,6 +181,19 @@
 				<div class="t1-btn1">
 					<button type="button" onclick="document.location='https://www.heartoftexascamp.com/75th-Anniversary/1970-photo-gallery'">View more pictures from 1970's</button>
 				</div>
+				<!-- The setup for the modal and thumbnail img-->
+				<img id="hot-modal-img" 
+				class="hot-img"
+				src="https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/e62998a2593a42ef9b14dbcb6df0ba43/1/4SoifmQpAbHrGFzRuwTbr?nocache" 
+				alt="Lives Impacted for Christ" style="width:70%;max-width:80px">
+
+				<!-- The Modal -->
+				<div id="hotModal" class="hot-modal">
+					<span class="hotClose">&times;</span>
+					<img class="hot-modal-content" id="hot-img01">
+					<div id="hot-caption"></div>
+				</div>
+			
 			</div>
 			<!--1980's info-->
 			<div class="t1-item">
@@ -394,9 +414,23 @@
 				<div class="t1-btn1">
 					<button type="button" onclick="document.location='https://www.heartoftexascamp.com/75th-Anniversary/2020-photo-gallery'">View more pictures from 2020's</button>
 				</div>
+				<!-- The setup for the modal and thumbnail img-->
+				<img id="hot-modal-img" 
+				class="hot-img"
+				src="https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/f15d4f1bbfae4a5c8cce3fd250030320/1/4SoifmQpAbHrGFzRuwTbr?nocache" 
+				alt="Lives Impacted for Christ" style="width:70%;max-width:80px">
+
+				<!-- The Modal -->
+				<div id="hotModal" class="hot-modal">
+					<span class="hotClose">&times;</span>
+					<img class="hot-modal-content" id="hot-img01">
+					<div id="hot-caption"></div>
+				</div>
+
 			</div>
 		</section>
 		<script>
+			// Navigation scrolling and hiding
 			var prevScrollpos = window.pageYOffset;
 			window.onscroll = function() {
 			var currentScrollPos = window.pageYOffset;
@@ -407,6 +441,29 @@
 				}
 				prevScrollpos = currentScrollPos;
 			}
+
+			// Popup Modal 
+			// Get the modal
+			var modal = document.getElementById("hotModal");
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById("hot-modal-img");
+			var modalImg = document.getElementById("hot-img01");
+			var captionText = document.getElementById("hot-caption");
+			img.onclick = function(){
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("hotClose")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			modal.style.display = "none";
+}
+
 		</script>
 	</body>
 </html>

@@ -1,0 +1,84 @@
+/* css for the popup modal
+
+#hot-modal-img 
+  border-radius: 5px
+  cursor: pointer
+  transition: 0.3s
+
+
+#hot-modal-img:hover 
+    opacity: 0.7
+
+/* The Modal (background) */
+.hot-modal 
+  display: none /* Hidden by default */
+  position: fixed /* Stay in place */
+  z-index: 1 /* Sit on top */
+  padding-top: 100px /* Location of the box */
+  left: 50%
+  top: 60%
+  width: auto /* Full width */
+  height: auto /* Full height */
+  overflow: auto /* Enable scroll if needed */
+  background-color: #868686 /* Fallback color */
+  background-color: #8d8d8de6 /* Black w/ opacity */
+  transform: translateX(-50%) translateY(-50%)
+
+
+/* Modal Content (image) */
+.hot-modal-content 
+  margin: auto
+  display: block
+  width: 100%
+  max-width: 700px
+
+
+/* Caption of Modal Image */
+#hot-caption 
+  margin: auto
+  display: block
+  width: 80%
+  max-width: 700px
+  text-align: center
+  color: #ccc
+  padding: 10px 0
+  height: 150px
+
+
+/* Add Animation */
+.hot-modal-content, #hot-caption   
+  -webkit-animation-name: zoom
+  -webkit-animation-duration: 0.6s
+  animation-name: zoom
+  animation-duration: 0.6s
+
+@keyframes zoom 
+  from 
+    transform: scale(0) 
+  to 
+    transform: scale(1)
+
+
+/* The Close Button */
+.hotClose 
+  position: absolute
+  top: 15px
+  right: 35px
+  color: #f1f1f1
+  font-size: 40px
+  font-weight: bold
+  transition: 0.3s
+
+
+.hotClose:hover,
+.hotClose:focus 
+  color: #bbb
+  text-decoration: none
+  cursor: pointer
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px)
+  .hot-modal-content 
+    width: 100%
+  

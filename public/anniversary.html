@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./build/style/global.css" />
 </head>
 <body>
-    <div class="t0-video"> <!-- video section is working on spacecraft, but not live server-->
-        <iframe src="https://www.youtube.com/embed/g8TryNyRg3M?autoplay=1&controls=0&autohide=1&showinfo=0&loop=1&playlist=g8TryNyRg3M" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    <!-- Youtube video -->
+    <div class="t0-video">
+        <iframe class="hot-iframe"
+            src="https://www.youtube.com/embed/g8TryNyRg3M?rel=0&autoplay=1&controls=0&autohide=1&showinfo=0&loop=1&playlist=g8TryNyRg3M" 
+            title="HOT-YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
 
@@ -25,16 +27,27 @@
                 </div>
             </a>
             <div class="nav-right">
-                <a href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
-                <a href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
-                <a href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
-                <a href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
-                <a href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
+                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
+                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
+                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
+                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
             </div>
         </div>
     </nav>
+    <!-- Mobilie menu -->
     <section id="75anniversary">
-        <!-- <div class="t0-item">
+    <div id="hotNav" class="hotOverlay">
+        <a href="javascript:void(0)" class="hotClosebtn" onclick="closeNav()">&times;</a>
+        <div class="hotOverlay-content">
+            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
+            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
+            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
+            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
+            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+        </div>
+    </div>
+       <!-- <div class="t0-item">
             <div class="t0-content">
                 <h1>In the Begining . . . 1</h1>
                 <p>
@@ -51,6 +64,7 @@
         </div> -->
     </section>
     <script>
+        // Navigation main menu show and hide 
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -61,6 +75,7 @@
             }
             prevScrollpos = currentScrollPos;
         }
+
     </script>
       
 </body>

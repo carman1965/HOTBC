@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./build/style/global.css" />
 </head>
 <body class="hot2-body">
+    <span class="hotMobNav" onclick="openNav()">&#9776; Menu</span>
     <div class="hot2-app">
         <nav>
             <div id="navbar">
@@ -27,6 +28,17 @@
                 </div>
             </div>
         </nav>
+		<!-- Mobilie menu -->
+		<div id="hotNav" class="hotOverlay">
+			<a href="javascript:void(0)" class="hotClosebtn" onclick="closeNav()">&times;</a>
+			<div class="hotOverlay-content">
+				<a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
+				<a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
+				<a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
+				<a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
+				<a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+			</div>
+		</div>
         <section id="hot2-photoGallery">
             <!--1940's info-->
             <div class="hot2-item">
@@ -176,6 +188,16 @@
             }
             prevScrollpos = currentScrollPos;
         }
-    </script>
+        // Functions for Mobile menu
+        function openNav() {
+            document.getElementById("hotNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("hotNav").style.width = "0%";
+        }
+
+
+</script>
 </body>
 </html>

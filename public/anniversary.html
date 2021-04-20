@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./build/style/global.css" />
 </head>
 <body>
+    <!-- Mobile menu button -->
+    <span class="hotMobNav" onclick="openNav()">&#9776; Menu</span>
     <!-- Youtube video -->
     <div class="t0-video">
         <iframe class="hot-iframe"
             src="https://www.youtube.com/embed/g8TryNyRg3M?rel=0&autoplay=1&controls=0&autohide=1&showinfo=0&loop=1&playlist=g8TryNyRg3M" 
-            title="HOT-YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            title="HOT-YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
 
     </div>
@@ -36,7 +37,6 @@
         </div>
     </nav>
     <!-- Mobilie menu -->
-    <section id="75anniversary">
     <div id="hotNav" class="hotOverlay">
         <a href="javascript:void(0)" class="hotClosebtn" onclick="closeNav()">&times;</a>
         <div class="hotOverlay-content">
@@ -47,6 +47,8 @@
             <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
         </div>
     </div>
+    <section id="75anniversary">
+
        <!-- <div class="t0-item">
             <div class="t0-content">
                 <h1>In the Begining . . . 1</h1>
@@ -74,6 +76,15 @@
 				document.getElementById("navbar").style.top = "-130px";
             }
             prevScrollpos = currentScrollPos;
+        }
+
+        // Functions for Mobile menu
+        function openNav() {
+            document.getElementById("hotNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("hotNav").style.width = "0%";
         }
 
     </script>

@@ -39,10 +39,11 @@
 
 /* Mobile menu */
 .hotMobNav
-	display: flex
+	display: none
 	flex-direction: column
 	font-size: 30px
 	cursor: pointer
+	z-index: 9999999
 
 .hotOverlay
 	height: 100%
@@ -55,7 +56,6 @@
 	background-color: rgba(0,0,0, 0.9)
 	overflow-x: hidden
 	transition: 0.5s
-
 
 .hotOverlay-content 
 	position: relative
@@ -83,6 +83,18 @@
 
 
 
-@media only screen and (max-width: 575.98px)
+@media screen and (max-width: 786px)
 	#navbar
 		display: none
+
+	.hotMobNav 
+		display: flex
+    
+	.hotOverlay a 
+		font-size: 20px
+
+	.hotOverlay .hotClosebtn 
+		font-size: 40px
+		top: 15px
+		right: 35px
+  

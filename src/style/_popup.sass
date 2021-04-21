@@ -16,7 +16,7 @@
   z-index: 1 /* Sit on top */
   padding-top: 100px /* Location of the box */
   left: 50%
-  top: 60%
+  top: 50%
   width: auto /* Full width */
   height: auto /* Full height */
   overflow: auto /* Enable scroll if needed */
@@ -43,7 +43,7 @@
   color: #ccc
   font-size: 25px
   padding: 10px 0
-  height: 150px
+  height: 100px
 
 
 /* Add Animation */
@@ -77,9 +77,30 @@
   text-decoration: none
   cursor: pointer
 
+/* Click Me image */
+.hot-img
+  position: absolute
+  top: 75%
+  left: 90%
+  width: 100%
+  max-width: 300px
+  z-index: 1
+  transform: translateX(-50%) translateY(-50%)
+  opacity: 0
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px)
+/* Image height on Smaller Screens */
+@media screen and (max-height: 900px)
+  .hot-modal-content 
+    // width:  50%
+    // max-height: 50vh
+    max-width: 65vh
+
+  /* Image Width on Smaller Screens */
+@media screen and (max-width: 750px)
   .hot-modal-content 
     width: 100%
+    max-width: 200px
+
+  .hot-img
+    max-width: 130px
   

@@ -2,7 +2,6 @@
 #timelineHtml
 	font-family: tahome
 	font-size: 16px
-	// line-height: 2em
 	padding: 0
 	margin: 0
 
@@ -68,10 +67,6 @@
 		filter: grayscale(0)
 
 	&:hover .t1-btn1
-		opacity: 1
-		transition: all 0.75s ease 0.5s
-
-	&:hover .t1-btn2
 		opacity: 1
 		transition: all 0.75s ease 0.5s
 
@@ -162,36 +157,17 @@
 		transform: translateX(-50%) translateY(-50%)
 		opacity: 0
 
-.t1-btn2
-		position: absolute
-		top: 95%
-		left: 75%
-		z-index: 1
-		transform: translateX(-50%) translateY(-50%)
-		opacity: 0
+/* Popup setup is all located in _popup.sass */
 
-/* Thumbnail loacation and settings for popup */
-.hot-img
-	position: absolute
-	top: 75%
-	left: 90%
-	width: 100%
-	max-width: 300px
-	z-index: 1
-	transform: translateX(-50%) translateY(-50%)
-	opacity: 0
-
-// Cell phone setup
-	@media only screen and (max-width: 575.98px)
-	#timelineHtml
-		font-family: tahome
-		font-size: 15px
-		// line-height: .5em
-		padding: 0
-		margin: 0
+/* Image height on Smaller Screens */
+@media screen and (max-width: 1000px) 
 	.t1-content
+		max-height: 36%
+		top: 55%
+		left: 10%
+
 		h1
-			font-size: 1.5rem
+			font-size: 1rem
 		p
 			font-size: 1rem
 		ul
@@ -200,3 +176,43 @@
 	.t1-year
 		p
 			font-size: 1.5rem
+
+	.t1-btn1
+		position: absolute
+		top: 95%
+		left: 40%
+		z-index: 1
+
+
+
+	
+// Mobile setup
+@media screen and (max-width: 750px)
+	#timelineHtml
+		font-family: tahome
+		font-size: 15px
+		// line-height: .5em
+		padding: 0
+		margin: 0
+
+	.t1-content
+		max-height: 30%
+		top: 60%
+		left: 10%
+
+		h1
+			font-size: 1rem
+		p
+			font-size: 1rem
+		ul
+			font-size: 1px
+
+	.t1-year
+		p
+			font-size: 1.5rem
+
+	.t1-btn1
+		position: absolute
+		top: 95%
+		left: 40%
+		z-index: 1

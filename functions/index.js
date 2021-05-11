@@ -16,9 +16,6 @@ let jotform = `https://api.jotform.com/form/${formId}/submissions?apiKey=${formK
 // Map box API Key
 let mapKey = functions.config().map.key;
 
-// This date is the date when data is refreshed.
-let refreshDate = 7;
-
 /**
  * reqMapData is the firebase function to get data from database.
  */
@@ -43,39 +40,35 @@ exports.reqMapData = functions.https.onRequest(async (req, res) => {
 
         if (!dataOld) res.send({ data });
         else {
+            const snapshot = await db.collection("users").listDocuments();
+
             let jotData = await fetch(jotform);
             let jsonData = await jotData.json();
 
-            db.collection("users")
-                .listDocuments()
-                .then((val) => {
-                    val.map((val) => {
-                        batch.delete(val);
-                    });
+            formatData(jsonData?.content).then((fData) => {
+                // Commit all data to firebase
+                fData.forEach((doc) => {
+                    const docRef = db.collection("users").doc();
 
-                    batch.commit();
+                    // Add update Time
+                    let date = new Date();
+                    date.setDate(date.getDate() + 7);
+                    doc.update = date;
 
-                    formatData(jsonData?.content).then((fData) => {
-                        // Commit all data to firebase
-                        fData.forEach((doc) => {
-                            const docRef = db.collection("users").doc();
-
-                            // Add update Time
-                            let date = new Date();
-                            date.setDate(date.getDate() + refreshDate);
-                            doc.update = date;
-
-                            batch.set(docRef, doc);
-                        });
-
-                        batch.commit();
-
-                        // Return data request
-                        res.send({
-                            data: fData,
-                        });
-                    });
+                    batch.set(docRef, doc);
                 });
+
+                snapshot.map((val) => {
+                    batch.delete(val);
+                });
+
+                batch.commit();
+
+                // Return data request
+                res.send({
+                    data: fData,
+                });
+            });
         }
     }
 });

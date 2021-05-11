@@ -1,46 +1,47 @@
 /* CSS for campforms */
+.hot-forms-tbl
+    display: block
 
-#hot-resp-tbl
-    width: 100vw
-    display: table
-
-#hot-resp-tbl-cap
-    display: table-caption
+.hot-tbl-caption
+    display: block
     text-align: center
-    font-size: 30px
-    font-weight: bold
-
-#hot-resp-tbl-hdr
-    display: table-header-group
-    background-color: grey
-    font-weight: bold
-    font-size: 25px
 
 .hot-tbl-hdr-cell
-    display: table-cell
-    padding: 10px
-    text-align: justify
-    border-bottom: 1px solid black
-
-#hot-resp-table-body
-    display: table-row-group
-
-.hot-resp-table-row
-    display: table-row
+    display: block
+    text-align: center
 
 .hot-tbl-body-cell
-    display: table-cell
+    display: block
+    text-align: center
 
+@media screen and (min-width: 1090px)
+    // .hot-tbl-caption
+    //     display: table-caption
+    //     column-count: 1
 
+    .hot-forms-tbl
+        // display: table
 
+        column-count: 2
+        column-gap: 20px
+        width: 100vw
+
+    .hot-tbl-hdr-cell
+        display: table-cell
+        border-bottom: 5px double #000000
+        padding: 2px
+        counter-reset: body-cnt
+        align-content: center
+            
+    .hot-tbl-body-cell    
+        display: table-row
+        padding: 2px
+
+        a::before
+            counter-increment: body-cnt
+            content: counter(body-cnt) ".) "
+            // position: absolute
+            // left: -.15em
+            // background: #0000
+            // padding: 1em
     
-.hot-forms-tbl
-    width: 70vw
-    border: 0px solid black
-
-    tr 
-        th
-            text-align: left
-
-        td
-            text-align: left

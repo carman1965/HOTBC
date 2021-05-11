@@ -1,57 +1,136 @@
 <!DOCTYPE html>
 <html id="AnniversaryHtml" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>75 Years - Heart of Texas Baptist Camp and Conference Center</title>
-    <link rel="stylesheet" href="./build/style/global.css" />
-</head>
-<body>
-    <!-- Mobile menu button -->
-    <span class="hotMobNav" onclick="openNav()">&#9776; Menu</span>
-    <!-- Youtube video -->
-    <div class="t0-video">
-        <iframe class="hot-iframe"
-            src="https://www.youtube.com/embed/g8TryNyRg3M?rel=0&autoplay=1&controls=0&autohide=1&showinfo=0&loop=1&playlist=g8TryNyRg3M" 
-            title="HOT-YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            75 Years - Heart of Texas Baptist Camp and Conference Center
+        </title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+        ></script>
 
-    </div>
-    <nav>
-        <div id="navbar">
-            <a class="navbar-logo" href="https://heartoftexascamp.com/75th-anniversary/">
-                <div class="logo-image">
-                    <img src="
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+        />
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+        <script
+            src="https://form.jotform.com/static/feedback2.js"
+            type="text/javascript"
+        ></script>
+
+        <script defer src="./build/bundle.js"></script>
+
+        <link rel="stylesheet" href="./build/style/global.css" />
+    </head>
+    <body>
+        <!-- Mobile menu button -->
+        <span class="hotMobNav" onclick="openNav()">&#9776; Menu</span>
+        <!-- Youtube video -->
+        <div class="t0-video">
+            <iframe
+                class="hot-iframe"
+                src="https://www.youtube.com/embed/g8TryNyRg3M?rel=0&autoplay=1&controls=0&autohide=1&showinfo=0&loop=1&playlist=g8TryNyRg3M"
+                title="HOT-YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            >
+            </iframe>
+        </div>
+        <nav>
+            <div id="navbar">
+                <a
+                    class="navbar-logo"
+                    href="https://heartoftexascamp.com/75th-anniversary/"
+                >
+                    <div class="logo-image">
+                        <img
+                            src="
                         https://static.spacecrafted.com/eb304f4763cc42c5836718ac2c602dd4/i/ddf3f59bf1ec4416b0d26b6ebda5f438/1/4SoifmQpAbHrGFzRuwTbr?nocache
-                    " class="img-fluid">
+                    "
+                            class="img-fluid"
+                        />
+                    </div>
+                </a>
+                <div class="nav-right">
+                    <a
+                        class="nav-right-link"
+                        href="https://heartoftexascamp.com/75th-anniversary/"
+                        >Home</a
+                    >
+                    <a
+                        class="nav-right-link"
+                        href="https://heartoftexascamp.com/75th-anniversary/events"
+                        >Events</a
+                    >
+                    <a
+                        class="nav-right-link"
+                        href="https://heartoftexascamp.com/75th-anniversary/timeline202175"
+                        >Timeline</a
+                    >
+                    <a
+                        class="nav-right-link"
+                        href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/"
+                        >Testimonials</a
+                    >
+                    <a
+                        class="nav-right-link"
+                        href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery"
+                        >Photo Gallery</a
+                    >
                 </div>
-            </a>
-            <div class="nav-right">
-                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
-                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
-                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
-                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
-                <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
+            </div>
+        </nav>
+        <!-- Mobilie menu -->
+        <div id="hotNav" class="hotOverlay">
+            <a
+                href="javascript:void(0)"
+                class="hotClosebtn"
+                onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="hotOverlay-content">
+                <a
+                    class="nav-right-link"
+                    href="https://heartoftexascamp.com/75th-anniversary/"
+                    >Home</a
+                >
+                <a
+                    class="nav-right-link"
+                    href="https://heartoftexascamp.com/75th-anniversary/events"
+                    >Events</a
+                >
+                <a
+                    class="nav-right-link"
+                    href="https://heartoftexascamp.com/75th-anniversary/timeline202175"
+                    >Timeline</a
+                >
+                <a
+                    class="nav-right-link"
+                    href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/"
+                    >Testimonials</a
+                >
+                <a
+                    class="nav-right-link"
+                    href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery"
+                    >Photo Gallery</a
+                >
             </div>
         </div>
-    </nav>
-    <!-- Mobilie menu -->
-    <div id="hotNav" class="hotOverlay">
-        <a href="javascript:void(0)" class="hotClosebtn" onclick="closeNav()">&times;</a>
-        <div class="hotOverlay-content">
-            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/">Home</a>
-            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/events">Events</a>
-            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/timeline202175">Timeline</a>
-            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-Testimonials/">Testimonials</a>
-            <a class="nav-right-link" href="https://heartoftexascamp.com/75th-anniversary/75th-photo-gallery">Photo Gallery</a>
-        </div>
-    </div>
-    <section id="75anniversary">
-        <div id="hot-map-container" class="hot-map">
-
-        </div>
-       <!-- <div class="t0-item">
+        <section id="75anniversary">
+            <div id="hot-map-container" class="hot-map"></div>
+            <!-- <div class="t0-item">
             <div class="t0-content">
                 <h1>In the Begining . . . 1</h1>
                 <p>
@@ -66,30 +145,28 @@
                 </p>
             </div>
         </div> -->
-    </section>
-    <script>
-        // Navigation main menu show and hide 
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-            } else {
-				document.getElementById("navbar").style.top = "-130px";
+        </section>
+        <script>
+            // Navigation main menu show and hide
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-130px";
+                }
+                prevScrollpos = currentScrollPos;
+            };
+
+            // Functions for Mobile menu
+            function openNav() {
+                document.getElementById("hotNav").style.width = "100%";
             }
-            prevScrollpos = currentScrollPos;
-        }
 
-        // Functions for Mobile menu
-        function openNav() {
-            document.getElementById("hotNav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("hotNav").style.width = "0%";
-        }
-
-    </script>
-      
-</body>
+            function closeNav() {
+                document.getElementById("hotNav").style.width = "0%";
+            }
+        </script>
+    </body>
 </html>

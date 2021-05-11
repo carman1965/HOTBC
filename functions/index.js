@@ -16,6 +16,9 @@ let jotform = `https://api.jotform.com/form/${formId}/submissions?apiKey=${formK
 // Map box API Key
 let mapKey = functions.config().map.key;
 
+// This date is the date when data is refreshed.
+let refreshDate = 7;
+
 /**
  * reqMapData is the firebase function to get data from database.
  */
@@ -52,7 +55,7 @@ exports.reqMapData = functions.https.onRequest(async (req, res) => {
 
                     // Add update Time
                     let date = new Date();
-                    date.setDate(date.getDate() + 7);
+                    date.setDate(date.getDate() + refreshDate);
                     doc.update = date;
 
                     batch.set(docRef, doc);

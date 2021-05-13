@@ -17,7 +17,7 @@ let jotform = `https://api.jotform.com/form/${formId}/submissions?apiKey=${formK
 let mapKey = functions.config().map.key;
 
 // This date is the date when data is refreshed.
-let refreshDate = 7;
+let refreshDate = 0.5;
 
 /**
  * reqMapData is the firebase function to get data from database.

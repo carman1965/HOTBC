@@ -28,16 +28,34 @@
 	height: auto
 
 	p
+		display: block
 		font-family: Arial, Helvetica, sans-serif
 		font-size: 25px
 		text-align: center
-		padding: 1px
+		background: rgb(255,255,255)
+		padding: 100px
+		border: 20px solid #000000
 
-	.hot-checkin
-		display: block
-		font-size: 1rem
-		text-align: center
+		.hot-checkin
+			display: flex
+			font-size: 1.8rem
+			color: rgb(255, 255, 255)
+			background: rgb(190, 0, 0)
+			width: 220px
+			padding: 10px
+			justify-content: center
+			align-items: center
+			border-radius: 10px
+			cursor: pointer
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+			transition-duration: 0.3s
+			transition-property: box-shadow, transform
 
+		.hot-checkin:hover, .hot-checkin:focus
+			box-shadow: 0 0 30px rgba(0,0,0,0.5)
+			transform: scale(1.1)
+
+		
 .hot-map
 	height: 500px
-	border: 1px solid #000
+	border: 1.5px solid #000

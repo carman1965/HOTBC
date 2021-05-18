@@ -32,7 +32,7 @@ if (FORM_ID)
         base: "https://form.jotform.com/",
         background: "#F59202",
         fontColor: "#FFFFFF",
-        buttonSide: "top",
+        buttonSide: "bottom",
         buttonAlign: "center",
         type: false,
         width: 700,
